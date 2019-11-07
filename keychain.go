@@ -248,6 +248,7 @@ func (k *keychain) Keys() ([]string, error) {
 	for idx, r := range results {
 		accountNames[idx] = r.Account
 	}
+	debugf("Available accounts: %q", accountNames)
 
 	return accountNames, nil
 }
