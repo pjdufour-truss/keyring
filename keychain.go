@@ -246,6 +246,7 @@ func (k *keychain) Keys() ([]string, error) {
 	debugf("Found %d results", len(results))
 	accountNames := make([]string, len(results))
 	for idx, r := range results {
+		debugf("account=%q access_group=%q", r.Account, r.AccessGroup)
 		accountNames[idx] = r.Account
 	}
 	debugf("Available accounts: %q", accountNames)
